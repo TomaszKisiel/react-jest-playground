@@ -1,0 +1,169 @@
+$background: #262d36;
+$orange: #e6761b;
+$green: #289558;
+$red: #e2422d;
+
+body {
+    background: $background;
+    color: #fff;
+}
+
+.app {
+    max-width: 600px;
+    margin: auto;
+
+    @media screen and (min-width: 720px) {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat( 3, max-content );
+    }
+}
+
+.header {
+    width: 100%;
+
+    @at-root #{&}__title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 24px 0;
+    }
+}
+
+.nav {
+    background: lighten($background, 10);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    border-radius: 8px;
+
+    @at-root #{&}__fill {
+        flex-grow: 1;
+    }
+
+    @at-root #{&}__control {
+        display: flex;
+        flex-direction: column;
+        margin-right: 12px;
+    }
+
+    @at-root #{&}__button {
+        background: $orange;
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        height: 28px;
+        padding: 8px 16px;
+        margin: auto;
+        cursor: pointer;
+        transition: all .1s ease-in-out;
+        transform: translateY(2px);
+
+        &:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 4px 0px 0px darken($background, 5);
+        }
+
+        &:active {
+            transform: translateY(0px);
+            box-shadow: none;
+            background: lighten($orange, 5);
+        }
+    }
+
+    @at-root #{&}__input {
+        border-radius: 6px;
+        padding: 5px 4px;
+    }
+
+}
+
+.list {
+    margin-top: 16px;
+
+    @at-root #{&}__item {
+        background: lighten($background, 10);
+        margin-bottom: 16px;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: scaleX(1.02) scaleY(1.05);
+        }
+    }
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+
+    @at-root #{&}--done {
+        .task__name {
+            color: darkgray;
+            text-decoration: line-through;
+        }
+
+       .task__description {
+           color: darkgray;
+           text-decoration: line-through;
+        }
+
+    }
+
+    @at-root #{&}__container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    @at-root #{&}__name {
+        font-size: 2rem;
+        color: $orange;
+    }
+
+    @at-root #{&}__description {
+        font-size: .85rem;
+    }
+
+    @at-root #{&}__button {
+        height: 28px;
+        outline: none;
+        border: 0;
+        margin: auto 3px;
+        border-radius: 15px;
+        padding: 5px 12px;
+        background: #fff;
+        cursor: pointer;
+        font-weight: bold;
+
+
+        @at-root #{&}--done {
+            border: 2px solid $green;
+            color: $green;
+
+            &:hover {
+                background: $green;
+                color: #fff;
+            }
+        }
+
+        @at-root #{&}--destroy {
+            border: 2px solid $red;
+            color: $red;
+
+            &:hover {
+                background: $red;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.footer {
+    @at-root #{&}__description {
+        text-align: center;
+    }
+}
