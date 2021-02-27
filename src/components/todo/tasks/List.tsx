@@ -2,9 +2,9 @@ import React, {useContext} from "react"
 import Task from "./Task"
 import NoTasks from "./NoTasks"
 
-import ITask from "../../interfaces/ITask"
-import TasksContext from "../../contexts/TasksContext"
-import {destroyTask, flagDoneTask} from "../../reducers/tasks/actions"
+import ITask from "../../../interfaces/ITask"
+import TasksContext from "../../../contexts/TasksContext"
+import {destroyTask, flagDoneTask} from "../../../reducers/tasks/actions"
 
 type NavigationProps = {
     tasks?: Array<ITask>

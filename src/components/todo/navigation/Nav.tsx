@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react"
-import TasksContext from "../../contexts/TasksContext"
-import ITask from "../../interfaces/ITask"
-import {insertTask} from "../../reducers/tasks/actions"
+import TasksContext from "../../../contexts/TasksContext"
+import ITask from "../../../interfaces/ITask"
+import {insertTask} from "../../../reducers/tasks/actions"
 
 type NavProps = {
 

@@ -1,5 +1,5 @@
 {
-  "name": "abc",
+  "name": "react-jest-playground",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^5.0.3"
+    "@testing-library/react-hooks": "^5.0.3",
+    "msw": "^0.27.0"
   }
 }

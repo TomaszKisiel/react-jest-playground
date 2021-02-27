@@ -1,0 +1,11 @@
+body {
+    background: #262d36;
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}

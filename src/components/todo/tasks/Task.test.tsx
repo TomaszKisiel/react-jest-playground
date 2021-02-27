@@ -2,7 +2,7 @@ import React from "react"
 import Task from "./Task"
 import {render, screen} from "@testing-library/react"
 import fireEvent from "@testing-library/user-event"
-import ITask from "../../interfaces/ITask"
+import ITask from "../../../interfaces/ITask"
 
 const onDoneMock = jest.fn()
 const onDestroyMock = jest.fn()
